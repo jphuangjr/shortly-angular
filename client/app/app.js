@@ -15,7 +15,7 @@ angular.module('shortly', [
       templateUrl: 'app/auth/signup.html',
       controller: 'AuthController'
     })
-    .when('/api/links', {
+    .when('/links', {
       templateUrl: 'app/links/links.html',
       controller: 'LinksController'
     });
