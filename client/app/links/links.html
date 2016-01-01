@@ -1,3 +1,10 @@
-<div id='container'>
+<div id='container' ng-app="shortly.links">
   <!-- Your html here -->
+  <div ng-controller = "LinksController">
+    <input ng-model="linkInput"/>
+    <button ng-click ="">Submit</button>
+    <ul>
+      <li ng-repeat></li>
+    </ul>
+  </div>
 </div>
