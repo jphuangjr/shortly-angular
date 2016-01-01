@@ -2,13 +2,13 @@ angular.module('shortly.links', [])
 
 .controller('LinksController', function ($scope, Links) {
   // Your code here
-  $scope.addLink = function(){
-    Links.addLink();
-    $scope.getLinks();
+  $scope.addOne = function(){
+    Links.addOne($scope.linkInput);
+    $scope.getAll();
   };
-  $scope.getLinks = function(){
-    $scope.data = Links.getLinks();
+  $scope.getAll = function(){
+    $scope.ourLinks = Links.getAll();
   };
-  $scope.data = {};
+  $scope.ourLinks = {};
 
 });
