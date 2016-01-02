@@ -3,7 +3,7 @@
   <div ng-controller = "LinksController">
     <label>Search: <input ng-model="searchText"></label>
     <ul>
-      <li ng-repeat="link in data.links | filter:searchText"> Site: {{link.url}}, Url: <a href="{{ link.base_url }}/{{link.code}}" target="_blank" > <button>{{ link.base_url }}/{{link.code}}</button></a>, Visits: {{link.visits}}</li>
+      <li ng-repeat="link in data.links | orderBy: '-visits' | filter:searchText"> Site: {{link.url}}, Url: <a href="{{ link.base_url }}/{{link.code}}" target="_blank" > <button>{{ link.base_url }}/{{link.code}}</button></a>, Visits: {{link.visits}}</li>
     </ul>
   </div>
 </div>
