@@ -13,6 +13,8 @@ module.exports = function (app, express) {
   // app.use('/api/links', helpers.decode);
   app.get('/api/links/', linksController.allLinks);
   app.post('/api/links/', linksController.newLink);
+  app.post("/api/link/nav/", linksController.navToLink);
+
 
   // If a request is sent somewhere other than the routes above,
   // send it through our custom error handler

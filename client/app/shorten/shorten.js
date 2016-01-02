@@ -16,6 +16,8 @@ angular.module('shortly.shorten', [])
     });
   };
 
+  
+
 
 
   $scope.getAll();

@@ -16,6 +16,11 @@ angular.module('shortly.links', [])
     });
   };
 
+  $scope.urlClickHandler = function(link) {
+    $scope.tester = link.code
+    Links.navLink(link);
+    //actuallly open that page
+  }
   $scope.getAll();
   $scope.linkInput = "http://"
 

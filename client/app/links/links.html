@@ -4,7 +4,7 @@
     <input type="text" ng-model="linkInput"/>
     <button ng-click ="addOne();">Submit</button>
     <ul>
-      <li ng-repeat="link in data.links track by $index"> {{ link }}</li>
+      <li ng-repeat="link in data.links track by $index"> Url: <a href="" ng-click="urlClickHandler(link)"> {{ link.url }}</a>, Visits: {{link.visits}}</li>
     </ul>
     <input ng-model = "tester"/>
   </div>
