@@ -6,11 +6,18 @@ angular.module('shortly.shorten', [])
   $scope.link = {};
 
   $scope.addLink = function(){
-    Links.addOne($scope.linkInput);
+    Links.addOne($scope.link);
+    $scope.getAll();
+    $scope.tester2 = $scope.link
   };
   $scope.getAll = function(){
     Links.getAll().then(function(data){
       $scope.data.links = data;
     });
   };
+
+
+
+  $scope.getAll();
+
 });

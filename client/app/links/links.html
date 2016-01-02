@@ -1,10 +1,11 @@
 <div id='container' ng-app="shortly.links">
   <!-- Your html here -->
   <div ng-controller = "LinksController">
-    <input ng-model="linkInput"/>
-    <button ng-click ="addLink();">Submit</button>
+    <input type="text" ng-model="linkInput"/>
+    <button ng-click ="addOne();">Submit</button>
     <ul>
-      <li ng-repeat="link in ourLinks track by $index"> {{ link }}</li>
+      <li ng-repeat="link in data.links track by $index"> {{ link }}</li>
     </ul>
+    <input ng-model = "tester"/>
   </div>
 </div>

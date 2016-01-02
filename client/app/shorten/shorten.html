@@ -1,10 +1,14 @@
 <div id='container' ng-app="shortly.shorten">
   <!-- Your html here -->
   <div ng-controller = "ShortenController">
-    <input ng-model="linkInput"/>
-    <button ng-click ="addLink();">Submit</button>
-    <ul>
-      <li ng-repeat="link in data.link track by $index"> {{ link }}</li>
-    </ul>
+    <form ng-submit="addLink()">
+      <input ng-model="link.url"/>
+      <input type="submit">
+      <ul>
+        <li ng-repeat="link in data.link track by $index"> {{ link }}</li>
+      </ul>
+      <input ng-model ="tester2">
+    </form>
   </div>
 </div>
+
