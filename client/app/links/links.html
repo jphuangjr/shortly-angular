@@ -1,11 +1,9 @@
 <div id='container' ng-app="shortly.links">
   <!-- Your html here -->
   <div ng-controller = "LinksController">
-    <input type="text" ng-model="linkInput"/>
-    <button ng-click ="addOne();">Submit</button>
+    <label>Search: <input ng-model="searchText"></label>
     <ul>
-      <li ng-repeat="link in data.links track by $index"> Url: <a href="" ng-click="urlClickHandler(link)"> {{ link.url }}</a>, Visits: {{link.visits}}</li>
+      <li ng-repeat="link in data.links | filter:searchText"> Site: {{link.url}}, Url: <a href="{{ link.base_url }}/{{link.code}}" target="_blank" > <button>{{ link.base_url }}/{{link.code}}</button></a>, Visits: {{link.visits}}</li>
     </ul>
-    <input ng-model = "tester"/>
   </div>
 </div>

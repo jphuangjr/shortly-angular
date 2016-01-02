@@ -23,19 +23,19 @@ angular.module('shortly.services', [])
       // console.log(">>>>>>>>>>>>> Reponse Data",response.data)
       return response.data;
     });
-  }, 
+  } 
 
-  navLink: function(link) {
-    return $http({
-      method: "POST", 
-      url: '/api/link/nav', 
-      data: link
-    })
-    .then(function(resp) {
-      return resp;
-    });
-  }
-  }
+  // navLink: function(link) {
+  //   return $http({
+  //     method: "POST", 
+  //     url: '/api/link/nav', 
+  //     data: link
+  //   })
+  //   .then(function(resp) {
+  //     return resp;
+  //   });
+  // }
+  };
 
 })
 .factory('Auth', function ($http, $location, $window) {

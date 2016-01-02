@@ -56,8 +56,7 @@ module.exports = {
   },
 
   navToLink: function (req, res, next) {
-    console.log(">>>>>>>>>>>>>>>PARAMS CODE", req.body.code)
-    findLink({code: req.body.code})
+    findLink({code: req.params.code})
       .then(function (link) {
         if (!link) {
           return next(new Error('Link not added yet'));
