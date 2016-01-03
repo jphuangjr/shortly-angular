@@ -5,16 +5,23 @@ angular.module('shortly.shorten', [])
   $scope.data = {};
   $scope.link = {};
 
-  $scope.addLink = function(){
-    Links.addOne($scope.link);
-    $scope.getAll();
-    $scope.tester2 = $scope.link
+  $scope.addLink = function(isValid){
+    if(isValid){
+      Links.addOne($scope.link);
+      $scope.getAll();
+      $scope.tester2 = $scope.link
+    } else {
+      alert("nahhhh BRAH. NO VALID URL. GET YOUR ISH TOGETHER")
+    }
+    
   };
   $scope.getAll = function(){
     Links.getAll().then(function(data){
       $scope.data.links = data;
     });
   };
+
+
 
   
 

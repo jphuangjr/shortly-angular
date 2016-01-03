@@ -1,8 +1,9 @@
 <div id='container' ng-app="shortly.shorten">
   <!-- Your html here -->
   <div ng-controller = "ShortenController">
-    <form ng-submit="addLink()">
-      <input ng-model="link.url"/>
+    <form name ="shortenForm" ng-submit="addLink(shortenForm.$valid)" novalidate>
+      <input type="url" ng-model="link.url" ng-minlength="4" ng-maxlength="100" class="form-control" />
+      <p ng-show="link.url.name.$invalid" class="help-block">Your link is too small.</p>
       <input type="submit">
       <ul>
         <li ng-repeat="link in data.links track by $index"> 
